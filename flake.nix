@@ -13,7 +13,7 @@
         name = "My-project build environment";
         buildInputs = with pkgs;[
           scons
-          pkgconf
+          pkg-config
           xorg.libX11
           xorg.libXcursor
           xorg.libXext
@@ -28,10 +28,16 @@
           wayland-scanner
           vulkan-loader
           alsa-lib
-
+		  fontconfig
 
           python39
         ];
+	    LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath (with pkgs; [
+          wayland
+		  vulkan-loader
+		  libxkbcommon
+		  fontconfig
+        ]);
         shellHook = ''
           echo "Welcome in $name"
           export NIX_SHELL_PACKAGES="Godot Build"
