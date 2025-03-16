@@ -30,6 +30,8 @@
           alsa-lib
 		  fontconfig
 		  lua
+		  alsa-utils
+		  alsa-lib
 
           python39
         ];
@@ -39,6 +41,8 @@
 		  libxkbcommon
 		  fontconfig
 		  lua
+		  alsa-utils
+		  alsa-lib
         ]);
         shellHook = ''
           echo "Welcome in $name"
