@@ -29,6 +29,7 @@
           vulkan-loader
           alsa-lib
 		  fontconfig
+		  lua
 
           python39
         ];
@@ -37,6 +38,7 @@
 		  vulkan-loader
 		  libxkbcommon
 		  fontconfig
+		  lua
         ]);
         shellHook = ''
           echo "Welcome in $name"
